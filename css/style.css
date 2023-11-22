@@ -1,10 +1,19 @@
-body {
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    box-sizing: border-box;
 }
 
+/* Basic Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Styles */
 .container-fluid {
     padding: 20px;
     background-color: #fff;
@@ -12,42 +21,60 @@ body {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Header Styles */
 .aureal-header {
     background-color: #6a1b9a;
     color: #fff;
     padding: 20px;
     text-align: center;
 }
-
+/* Navigation Styles */
 .aureal-navbar {
-    background-color: #787679; 
+    background-color: #787679;
     color: #fff;
-    padding: 20px;
+    padding: 10px; 
+    display: flex; /* flexbox */
+    justify-content: space-around; 
 }
-.nav-link {
-color: white;
-border-radius: 10px solid white;
-background-color: #6a1b9a;
-}
-.nav a:hover {
-    color: #eeff00;
+
 .aureal-navbar ul {
     list-style-type: none;
+    margin: 0;
+    padding: 0; }
 }
+
+.aureal-navbar .nav-item {
+    margin-bottom: 0; 
+}
+
+.nav-link {
+    color: white;
+    border-radius: 10px; 
+    background-color: #6a1b9a;
+    padding: 8px 12px; 
+}
+
+.nav-link:hover {
+    color: #eeff00;
+}
+.aureal-navbar ul {
+    list-style-type: none;
 }
 
 .aureal-navbar .nav-item {
     margin-bottom: 10px;
 }
 
+/* Content Styles */
 .aureal-content {
-    background-color: #D8BFD8; 
+    background-color: #D8BFD8;
     color: #333;
     padding: 20px;
 }
 
+/* Footer Styles */
 .aureal-footer {
-    background-color: #6a1b9a; 
+    background-color: #6a1b9a;
     color: #fff;
     padding: 10px 0;
     text-align: center;
@@ -57,6 +84,7 @@ background-color: #6a1b9a;
     margin: 0;
 }
 
+/* Media Query */
 @media (max-width: 576px) {
     .aureal-navbar {
         padding: 20px 0;
@@ -72,4 +100,151 @@ background-color: #6a1b9a;
     }
 }
 
+/* Additional Styles */
+header {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
+section {
+    padding: 40px;
+    margin: 20px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    margin-top: 40px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Default styling for all screen sizes */
+.aureal-gallery {
+    /* Add styling for the gallery section */
+    /* Adjust dimensions, spacings, etc. */
+  }
+  
+  .gallery {
+    display: grid;
+    gap: 0px;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Media query for medium-sized screens (768px and up) */
+  @media (min-width: 768px) {
+    .gallery {
+      grid-template-columns: 2fr 2fr;
+    }
+  }
+  
+  /* Media query for small-sized screens (576px to 767px) */
+  @media (min-width: 576px) and (max-width: 767px) {
+    .gallery {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  /* Media query for extra-small screens (up to 575px) */
+  @media (max-width: 575px) {
+    .gallery {
+      grid-template-columns: 1fr;
+    }
+  }  
+    .external-links {
+        /* Styling for the external links section */
+        /* Adjust as needed */
+    }
+
+.navigation-arrows {
+    position: fixed;
+    bottom: 20px;
+}
+
+.left-arrow {
+    position: absolute;
+    left: 20px; /* Adjust as needed */
+}
+
+.right-arrow {
+    position: absolute;
+    right: 20px; /* Adjust as needed */
+}
+
+/* Typewriter Effect */
+.typewriter-left {
+    font-family: 'YourCustomFont', sans-serif;
+    overflow: hidden;
+    border-right: 2px solid; 
+    white-space: nowrap; 
+    margin: 0 auto; 
+    letter-spacing: 2px; 
+    animation: typing 8s steps(40, end) forwards;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+.smooth-paragraph {
+    opacity: 0; 
+    animation: smoothFadeIn 30s forwards; 
+}
+
+@keyframes smoothFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; } 
+}
+.typewriter-slow {
+    font-family: 'YourCustomFont', sans-serif;
+    border-right: 1px solid; 
+    white-space: wrap; 
+    margin: 1 center;
+    letter-spacing: 1px;
+    animation: typing-slow 20s steps(300, end) forwards; 
+}
+
+
+@keyframes typing-slow {
+    from { width: 0% }
+    to { width: 100% }
+}
+
+.smooth-paragraphb {
+    opacity: 0; 
+    animation: smoothFadeIn 15s forwards; 
+}
+
+.smooth-paragraphc {
+    opacity: 0; 
+    animation: smoothFadeIn 5s forwards;
+}
+
+
+
+@keyframes smoothFadeIn {
+    from { opacity: 0; } 
+    to { opacity: 1; } 
+}
